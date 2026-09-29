@@ -276,7 +276,7 @@ fn decimate_float<const OUT_NUM_ROWS: usize, const OUT_NUM_COLS: usize>(
 fn pdq_image_domain_quality_metric<const OUT_NUM_ROWS: usize, const OUT_NUM_COLS: usize>(
     buffer64x64: &[[f32; OUT_NUM_COLS]; OUT_NUM_ROWS],
 ) -> f32 {
-    let mut gradient_sum = 0.0;
+    let mut gradient_sum = 0;
 
     for i in 0..(OUT_NUM_ROWS - 1) {
         for j in 0..OUT_NUM_COLS {
